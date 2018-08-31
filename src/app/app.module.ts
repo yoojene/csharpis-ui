@@ -10,9 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SearchRetrieverService } from './services/search-retriever.service';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes = [
-  { path: '', component: AppComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: '**', redirectTo: '' }
 ];
@@ -21,7 +23,9 @@ const appRoutes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LandingPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
