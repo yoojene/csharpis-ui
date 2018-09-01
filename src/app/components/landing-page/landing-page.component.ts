@@ -13,7 +13,7 @@ export class LandingPageComponent implements OnInit {
   csSearchFormGroup: FormGroup;
   searchResults: Search[];
   error: boolean;
-  reultsFound: boolean;
+  resultsFound = true;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -26,14 +26,14 @@ export class LandingPageComponent implements OnInit {
 
   buildForm(): void {
     this.csSearchFormGroup = this._formBuilder.group({
-      value: ''
+      searchQuery: ''
     });
   }
 
   submitForm(): void {
-    console.log(this.csSearchFormGroup.value);
-    this._searchRetriever.retrieve(this.csSearchFormGroup.value).subscribe(result => {
+    this._searchRetriever.retrieve(this.csSearchFormGroup.value.searchQuery).subscribe(result => {
       this.searchResults = result;
+      this.resultsFound = true;
     }, error => {
       console.log(error);
       this.error = true;

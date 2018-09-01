@@ -1,17 +1,21 @@
-<div class="container">
+<div *ngIf="!resultsFound" class="container">
   <img src="/src//assets//csharpislogo.svg" alt="c# logo" class="cs-logo cs-mb20">
   <form [formGroup]="csSearchFormGroup">
     <div class="input-container">
-      <input type="text" name="search" id="search" class="cs-input width100" placeholder="Enter repo..." formControlName="value">
+      <input type="text" name="search" id="search" class="cs-input width100" placeholder="Enter a project name..." formControlName="searchQuery">
     </div>
     <div class="button-container cs-mt20 cs-center">
-        <button class="cs-btn cs-btn--primary" (click)="submitForm()">
-          Search Repos
-        </button>
-        <button class="cs-btn cs-btn--tertiary cs-ml20">
-          I'm Feeling Lucky
-        </button>
-      </div>
+      <button class="cs-btn cs-btn--primary" (click)="submitForm()">
+        Search Repos
+      </button>
+      <button class="cs-btn cs-btn--tertiary cs-ml20">
+        I'm Feeling Lucky
+      </button>
+    </div>
   </form>
 </div>
+
+<app-search-results *ngIf="resultsFound" [searchResults]="searchResults"></app-search-results>
+
+
 <app-footer></app-footer>
