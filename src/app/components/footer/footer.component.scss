@@ -1,0 +1,20 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+
+  & .links-container {
+    float: right;
+    & a{
+      text-decoration: none;
+      color: #2B2D42;
+      &:hover {
+        text-decoration: underline;
+        color: #8D99AE;
+      }
+    }
+  }
+}
+
