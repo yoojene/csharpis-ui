@@ -12,6 +12,7 @@ import { SearchRetrieverService } from './services/search-retriever.service';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 const appRoutes = [
   { path: '', component: LandingPageComponent },
@@ -25,7 +26,8 @@ const appRoutes = [
     AppComponent,
     AboutUsComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
