@@ -1,4 +1,8 @@
 export class Search {
-  values: any;
-  pages: number;
+  url: string;
+  name: string;
+  description: string;
+  project: string;
+  author: string;
+  tags: string[];
 }
