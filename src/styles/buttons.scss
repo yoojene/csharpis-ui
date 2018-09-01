@@ -1,0 +1,46 @@
+@import "_variables.scss";
+
+// buttons
+.cs-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.cs-btn--outline {
+  border: 3px solid;
+}
+
+.cs-btn--primary {
+  color: $white;
+  background-color: $primary;
+  border: 1px solid $primary;
+  &:hover {
+    color: $white;
+    background-color: rgba($color: $primary, $alpha: 0.9);
+    border-color: rgba($color: $primary, $alpha: 0.9);
+  }
+}
+
+.cs-btn--secondary {
+  color: $primary;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+  &:hover {
+    color: $white;
+    background-color: rgba($color: $primary, $alpha: 0.9);
+    border-color: rgba($color: $primary, $alpha: 0.9);
+  }
+}
+
+.cs-btn--tertiary {
+  color: $white;
+  background-color: $tertiary;
+  border: 1px solid $tertiary;
+  &:hover {
+    color: $white;
+    background-color: rgba($color: $tertiary, $alpha: 0.9);
+    border-color: rgba($color: $tertiary, $alpha: 0.9);
+  }
+}
