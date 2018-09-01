@@ -11,7 +11,7 @@ export class SearchRetrieverService {
 
   constructor(private _httpClient: HttpClient) {}
 
-  retrieve(query: string): Observable<Search[]> {
+  retrieve(query: string, page: number): Observable<Search> {
     return this._httpClient
       .get(`${this.apiUrl}?query=${query}&page=${page}`)
       .pipe(catchError(error => this.handleError(error)));
