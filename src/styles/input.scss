@@ -3,4 +3,15 @@
   border: none !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16) !important;
   height: 60px !important;
+  font-family: 'PT Sans', sans-serif !important;
+  font-size: 36px !important;
+  color: $tertiary !important;
+  text-align: center;
+  caret-color: $tertiary;
+  &::placeholder {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 36px;
+    color: $tertiary;
+    text-align: center;
+  }
 }
