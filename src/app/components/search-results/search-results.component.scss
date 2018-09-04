@@ -1,0 +1,38 @@
+.cs-information--grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 200px 350px 1fr 1fr;
+}
+
+.cs-repo--avatar {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.cs-repo--title {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.cs-repo--description {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.cs-repo--link {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
