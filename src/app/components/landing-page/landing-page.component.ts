@@ -13,7 +13,7 @@ export class LandingPageComponent implements OnInit {
   csSearchFormGroup: FormGroup;
   searchResults: Search[];
   error: boolean;
-  resultsFound = true;
+  resultsFound = false;
 
   constructor(
     private _formBuilder: FormBuilder,
