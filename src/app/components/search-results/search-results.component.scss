@@ -1,22 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.cs-hero--container {
+  margin-top: -160px;
+}
+
 .cs-information--grid {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 200px 350px 1fr 1fr;
+  grid-template-columns: 250px auto;
 }
 
 .cs-repo--avatar {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 6;
 }
 
 .cs-repo--title {
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
   grid-row: 1 / span 1;
 }
 
 .cs-repo--description {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 
   &__title {
     display: block;
@@ -26,7 +32,18 @@
 }
 
 .cs-repo--link {
-  grid-column: 3 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.cs-repo--author {
+  grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 
   &__title {
@@ -35,4 +52,32 @@
     text-decoration: underline;
   }
 }
+
+.cs-repo--tags {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  &__pillbox {
+    border: 1px solid $primary;
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 12px;
+    margin: 10px 10px 0 0px;
+    float: left;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+
 

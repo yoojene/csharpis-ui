@@ -1,27 +1,35 @@
 <div class="cs-hero--large cs-text--center">
   <span class="cs-hero--title">Results</span>
 </div>
-<div class="container cs-mt20 cs-hero--container">
+<div class="cs-container cs-mt20 cs-hero--container">
   <div class="row cs-mt20">
     <div class="twelve columns">
-      <div class="cs-card">
+      <div *ngFor="let searchResult of searchResults" class="cs-card cs-mt20">
         <div class="cs-card--content">
           <div class="cs-information--grid">
             <div class="cs-repo--avatar">
-              <img src="/src/assets/hot-man.jpg" alt="What A Man">
+              <img src="{{searchResult.imageUrl}}" alt="">
             </div>
             <div class="cs-repo--title">
-              <h1>Newtonsoft.Json</h1>
+              <h1>{{searchResult.name}}</h1>
+            </div>
+            <div class="cs-repo--author">
+              <span class="cs-repo--author__title">Author</span>
+              {{searchResult.authorName}}
             </div>
             <div class="cs-repo--description">
               <span class="cs-repo--description__title">Description</span>
-              Json.NET. World-class JSON Serializer. Serialize and deserialize any .NET object with Json.NET's powerful JSON serializer.
-              LINQ to JSON. High Performance. 50% faster than DataContractJsonSerializer, and 250% faster than JavaScriptSerializer.
-              Open Source. Json.NET is open source software and is completely free
+              {{searchResult.description}}
             </div>
             <div class="cs-repo--link">
               <span class="cs-repo--link__title">Link</span>
-              <a href="https://github.com/JamesNK/Newtonsoft.Json">Newtonsoft.Json</a>
+              <a href="{{searchResult.slug}}">{{searchResult.slug}}</a>
+            </div>
+            <div class="cs-repo--tags">
+              <span class="cs-repo--tags__title">Tags</span>
+              <div *ngFor="let tag of searchResult.tags">
+                <span class="cs-repo--tags__pillbox">{{tag}}</span>
+              </div>
             </div>
           </div>
         </div>
