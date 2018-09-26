@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   Api: {
-    searchRetriever: 'https://csharp.is/search'
+    searchRetriever: 'https://csharp.is/api/search'
   }
 };
