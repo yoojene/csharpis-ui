@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Search } from '../../models/search';
 import { SearchRetrieverService } from '../../services/search-retriever.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -17,7 +18,8 @@ export class LandingPageComponent implements OnInit {
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _searchRetriever: SearchRetrieverService
+    private _searchRetriever: SearchRetrieverService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class LandingPageComponent implements OnInit {
     this._searchRetriever.retrieve(this.csSearchFormGroup.value.searchQuery).subscribe(result => {
       this.searchResults = result;
       this.resultsFound = true;
+      this.router.navigate(['/search']);
     }, error => {
       console.log(error);
       this.error = true;

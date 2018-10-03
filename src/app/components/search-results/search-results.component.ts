@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Search } from '../../models/search';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-search-results',
@@ -8,5 +9,15 @@ import { Search } from '../../models/search';
 })
 export class SearchResultsComponent {
 
+  constructor(private location: Location){}
+
   @Input() searchResults: Search[];
+
+
+  returnToSearch() {
+    // route back to landing page
+    this.location.back();
+  }
+
 }
+

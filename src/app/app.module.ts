@@ -16,6 +16,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 
 const appRoutes = [
   { path: '', component: LandingPageComponent },
+  { path: 'search', component: SearchResultsComponent},
   { path: 'about-us', component: AboutUsComponent },
   { path: '**', redirectTo: '' }
 ];
